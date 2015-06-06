@@ -10,22 +10,22 @@
 #ifndef _H_SIGMOIDNEURON
 #define _H_SIGMOIDNEURON
 
-#include <boost/numeric/ublas/vector.hpp>
+#include <Eigen/Dense>
 
 class SigmoidNeuron {
 	private:
 		// Set inputs
-		void setInput(Vector<float> input);
+		void setInput(Eigen::VectorXf input);
 
 
 		// Calculate the output
 		float calculateOutput();
 
 	protected:
-		Vector<float> x;	// Weight
-		Vector<float> w;	// Input
+		Eigen::VectorXf x;	// Input
+		Eigen::VectorXf w;	// Weights
 
-		signed char b;		// Bias
+		signed char b;	// Bias
 
 };
 
