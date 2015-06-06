@@ -10,22 +10,26 @@
 #ifndef _H_SIGMOIDNEURON
 #define _H_SIGMOIDNEURON
 
-#include <Eigen/Dense>
+#include <vector>
 
 class SigmoidNeuron {
-	private:
+	public:
 		// Set inputs
-		void setInput(Eigen::VectorXf input);
-
+		void setInput(std::vector<float> input);
 
 		// Calculate the output
 		float calculateOutput();
 
-	protected:
-		Eigen::VectorXf x;	// Input
-		Eigen::VectorXf w;	// Weights
+		// Constructor
+		SigmoidNeuron(std::vector<float> w, signed char b);
 
-		signed char b;	// Bias
+	protected:
+		std::vector<float> x;	// Input
+		std::vector<float> w;	// Weights
+
+		signed char b;		// Bias
+
+		float dotProduct();
 
 };
 
