@@ -1,10 +1,10 @@
 # ----------- TEST
-: test/test.cpp |> g++ -Wall -c %f -o %o |> test/%B.o
+: test/test.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> test/%B.o
 
 # ----------- Jarvis-NLP DEBUG
-: foreach jarvis-nlp/src/*.cpp |> g++ -Wall -c %f -o %o |> jarvis-nlp/debug/obj/%B.o
-: jarvis-nlp/debug/obj/*.o |> g++ -Wall %f -o %o |> jarvis-nlp/jarvis-nlp
+: foreach jarvis-nlp/src/*.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> jarvis-nlp/debug/obj/%B.o
+: jarvis-nlp/debug/obj/*.o |> g++ -std=c++11 -Wall %f -o %o |> jarvis-nlp/jarvis-nlp
 
 # ----------- Jarvis-NLP TEST
-: foreach jarvis-nlp/test/*.cpp |> g++ -Wall -c %f -o %o |> jarvis-nlp/test/obj/%B.o
-: jarvis-nlp/test/obj/*.o test/test.o |> g++ -Wall %f -o %o |> test/jarvis-nlp
+: foreach jarvis-nlp/test/*.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> jarvis-nlp/test/obj/%B.o
+: jarvis-nlp/test/obj/*.o test/test.o |> g++ -std=c++11 -Wall %f -o %o |> test/jarvis-nlp
