@@ -1,4 +1,6 @@
 .tup
-*.o
+test/*.o
 test/jarvis-nlp
+jarvis-nlp/debug/obj/*.o
+jarvis-nlp/test/obj/*.o
 jarvis-nlp/jarvis-nlp
