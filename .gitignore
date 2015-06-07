@@ -1,3 +1,4 @@
-./.tup
+.tup
 *.o
 test/jarvis-nlp
+jarvis-nlp/jarvis-nlp
