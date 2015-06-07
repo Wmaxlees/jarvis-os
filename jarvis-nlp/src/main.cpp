@@ -17,6 +17,15 @@
 	along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/**
+	FILE: main.cpp
+
+	@author W. Max Lees
+	@docdate 06.06.2015
+
+	@descr Main file for running the Jarvis-NPL part of Jarvis OS
+*/
+
 #include <cstdlib>
 #include <iostream>
 

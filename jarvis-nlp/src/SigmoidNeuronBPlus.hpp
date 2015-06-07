@@ -17,13 +17,15 @@
 	along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-/*
- * AUTHOR:	W. Max Lees
- * EMAIL:	william.lees@ucdenver.edu
- * FILE:		SigmoidNeuronBPlus.hpp
- *
- * DESCRIPTION:
- */
+/**
+	FILE: SigmoidNeuronBPlus.hpp
+
+	@author W. Max Lees
+	@docdate 06.06.2015
+
+	@descr Header for a Sigmoid Neuron that has different biases
+			 for each output
+*/
 
 
 #ifndef _H_SIGMOIDNEURONBPLUS

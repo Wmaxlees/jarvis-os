@@ -17,13 +17,14 @@
 	along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-/*
- * AUTHOR:	W. Max Lees
- * EMAIL:	william.lees@ucdenver.edu
- * FILE:		SigmoidNeuronBPlus.cpp
- *
- * DESCRIPTION: 
- */
+/**
+	FILE: SigmoidNeuronBPlus.cpp
+
+	@author W. Max Lees
+	@docdate 06.06.2015
+
+	@descr Sigmoid Neuron with different biases for each output
+*/
 
 #include <vector>
 #include <math.h>

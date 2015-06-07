@@ -17,13 +17,14 @@
 	along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-/*
- * AUTHOR:	W. Max Lees
- * EMAIL:	william.lees@ucdenver.edu
- * FILE:	SigmoidNeuron.h
- *
- * DESCRIPTION:
- */
+/**
+	FILE: SigmoidNeuron.h
+
+	@author W. Max Lees
+	@docdate 06.05.2015
+
+	@descr Sigmoid Neuron class header
+*/
 
 
 #ifndef _H_SIGMOIDNEURON
