@@ -1,4 +1,6 @@
 /**
+	Copyright 2015 W. Max Lees
+
 	This file is part of Jarvis OS.
 
 	Jarvis OS is free software: you can redistribute it and/or modify
