@@ -46,7 +46,7 @@ float SigmoidNeuron::dotProduct(){
 		throw 0;
 
 	// Calculate the dot product
-	float result;
+	float result = 0.0f;
 	for (unsigned char i = 0; i < this->x.size(); ++i) {
 		result += this->x[i] * this->w[i];
 	}
