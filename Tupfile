@@ -1,14 +1,31 @@
-# ----------- TEST
-: test/test.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> test/%B.o
-
 # ----------- Jarvis-NLP DEBUG
 : foreach jarvis-nlp/src/*.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> jarvis-nlp/debug/obj/%B.o
 : jarvis-nlp/debug/obj/*.o |> g++ -std=c++11 -Wall %f -o %o |> jarvis-nlp/jarvis-nlp
 
-# ----------- Jarvis-NLP TEST
-: foreach jarvis-nlp/test/*.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> jarvis-nlp/test/obj/%B.o
-: jarvis-nlp/test/obj/*.o test/test.o |> g++ -std=c++11 -Wall %f -o %o |> test/jarvis-nlp
+# ----------- Jarvis Module Frame DEBUG
+: foreach jarvis-module-frame/src/*.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> jarvis-module-frame/debug/obj/%B.o
+: jarvis-module-frame/debug/obj/*.o |> g++ -std=c++11 -Wall %f -o %o |> jarvis-module-frame/jarvis-module-frame
+
+
+
+# ----------------------------------------------------------------
+# ----------- MODULES
+# ----------------------------------------------------------------
 
 # ----------- Test Module
 : foreach jarvis-modules/test-module/*.cpp |> g++ -fPIC -std=c++11 -Wall -c %f -o %o |> jarvis-modules/test-module/obj/%B.o
 : jarvis-modules/test-module/obj/*.o |> g++ -shared -std=c++11 -Wall -o %o %f |> jarvis-modules/modules/test-module.so
+
+
+
+# ----------------------------------------------------------------
+# ----------- TESTS
+# ----------------------------------------------------------------
+: test/test.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> test/%B.o
+
+# ----------- Jarvis-NLP
+: foreach jarvis-nlp/test/*.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> jarvis-nlp/test/obj/%B.o
+: jarvis-nlp/test/obj/*.o test/test.o |> g++ -std=c++11 -Wall %f -o %o |> test/jarvis-nlp
+
+
+

@@ -25,16 +25,12 @@
    @descr File that contains the main class that calls the module frames.
 */
 
-#include <stdlib>
+#include <cstdlib>
 
-namespace Jarvis {
-   namespace ModuleFrame {
+#include "ModuleFrame.hpp"
 
-      int main(int argc, char** argv) {
+int main(int argc, char** argv) {
 
-         return EXIT_SUCCESS;
-      }
-
-   }
+   return EXIT_SUCCESS;
 }
 
