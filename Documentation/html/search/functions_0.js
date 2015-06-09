@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['calculateoutput',['calculateOutput',['../class_sigmoid_neuron.html#a1e96a11df4515a3b2c21e8fc9e0c36eb',1,'SigmoidNeuron::calculateOutput()'],['../class_sigmoid_neuron_b_plus.html#addd23bffa5ed6d973213590ef0788e0f',1,'SigmoidNeuronBPlus::calculateOutput()']]],
-  ['call',['call',['../class_module.html#ac9f545ebde4cb419231545e72b98b7bf',1,'Module::call()'],['../class_test_module.html#a1bb648a41a8016dd8e24a1efd993ad67',1,'TestModule::call()']]]
+  ['abstractregistry',['AbstractRegistry',['../classel_1_1base_1_1utils_1_1_abstract_registry.html#afe13c67ebd1ed1aa72845926894dffa2',1,'el::base::utils::AbstractRegistry::AbstractRegistry(void)'],['../classel_1_1base_1_1utils_1_1_abstract_registry.html#a9f468010439d491e90419f9334afcdba',1,'el::base::utils::AbstractRegistry::AbstractRegistry(AbstractRegistry &amp;&amp;sr)']]],
+  ['addflag',['addFlag',['../classel_1_1_loggers.html#aedd2de02dd701b0f20ddaa10f1f728f1',1,'el::Loggers']]]
 ];

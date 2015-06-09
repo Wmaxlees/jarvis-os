@@ -55,7 +55,7 @@ TestModule::~TestModule() {
 
 
 std::string TestModule::test() {
-	std::cout << "Test call successful";
+	std::cout << "Test call successful" << std::endl;
 
 	return "Test Successful";
 }

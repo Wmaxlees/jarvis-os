@@ -113,46 +113,56 @@ $(document).ready(function(){initNavTree('_module_frame_8hpp_source.html','');})
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef _H_MODULEFRAME</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define _H_MODULEFRAME</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_jarvis.html">Jarvis</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   <span class="keyword">namespace </span>ModuleFrame {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;../../jarvis-modules/Module.hpp&quot;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_jarvis_1_1_module_frame_1_1_module_frame.html">   40</a></span>&#160;      <span class="keyword">class </span><a class="code" href="class_jarvis_1_1_module_frame_1_1_module_frame.html">ModuleFrame</a> {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;         <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_jarvis.html">Jarvis</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   <span class="keyword">namespace </span>ModuleFrame {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="comment">// Typedefs to get access module functions                                           </span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keyword">typedef</span> <a class="code" href="class_module.html">Module</a>* <span class="keyword">get</span>();                                                            </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keyword">typedef</span> <span class="keywordtype">void</span> destroy(<a class="code" href="class_module.html">Module</a>* module); </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="class_jarvis_1_1_module_frame_1_1_module_frame.html#a79737a671da2eb62485921bb763dc519">load</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="class_jarvis_1_1_module_frame_1_1_module_frame.html#aad902957f0384508a01c3e9cc05563c1">run</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_jarvis_1_1_module_frame_1_1_module_frame.html">   47</a></span>&#160;      <span class="keyword">class </span><a class="code" href="class_jarvis_1_1_module_frame_1_1_module_frame.html">ModuleFrame</a> {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;         <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="class_jarvis_1_1_module_frame_1_1_module_frame.html#a79737a671da2eb62485921bb763dc519">load</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="class_jarvis_1_1_module_frame_1_1_module_frame.html#aad902957f0384508a01c3e9cc05563c1">run</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="class_jarvis_1_1_module_frame_1_1_module_frame.html#ae88d8dce359e569e965208cd32ff1975">release</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="class_jarvis_1_1_module_frame_1_1_module_frame.html#ae88d8dce359e569e965208cd32ff1975">release</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="class_jarvis_1_1_module_frame_1_1_module_frame.html#af79c4d7756497b12f26ca6fa3a9ddada">ModuleFrame</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="class_jarvis_1_1_module_frame_1_1_module_frame.html#aefadccfa57a1b97eb42182ea0516d52e">~ModuleFrame</a>();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;         <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordtype">void</span>* handle;  </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      };</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordtype">void</span>* handle;              </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keyword">get</span>* get_function;         </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            destroy* destroy_function; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="class_module.html">Module</a>* module;            </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      };</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // _H_MODULEFRAME</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="ttc" id="class_jarvis_1_1_module_frame_1_1_module_frame_html"><div class="ttname"><a href="class_jarvis_1_1_module_frame_1_1_module_frame.html">Jarvis::ModuleFrame::ModuleFrame</a></div><div class="ttdoc">Class that holds the module and makes all necessary calls. </div><div class="ttdef"><b>Definition:</b> ModuleFrame.hpp:40</div></div>
-<div class="ttc" id="class_jarvis_1_1_module_frame_1_1_module_frame_html_a79737a671da2eb62485921bb763dc519"><div class="ttname"><a href="class_jarvis_1_1_module_frame_1_1_module_frame.html#a79737a671da2eb62485921bb763dc519">Jarvis::ModuleFrame::ModuleFrame::load</a></div><div class="ttdeci">void load()</div><div class="ttdoc">Load the module into the frame. </div><div class="ttdef"><b>Definition:</b> ModuleFrame.cpp:36</div></div>
-<div class="ttc" id="class_jarvis_1_1_module_frame_1_1_module_frame_html_aad902957f0384508a01c3e9cc05563c1"><div class="ttname"><a href="class_jarvis_1_1_module_frame_1_1_module_frame.html#aad902957f0384508a01c3e9cc05563c1">Jarvis::ModuleFrame::ModuleFrame::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Run the specified funcion. </div><div class="ttdef"><b>Definition:</b> ModuleFrame.cpp:43</div></div>
-<div class="ttc" id="class_jarvis_1_1_module_frame_1_1_module_frame_html_ae88d8dce359e569e965208cd32ff1975"><div class="ttname"><a href="class_jarvis_1_1_module_frame_1_1_module_frame.html#ae88d8dce359e569e965208cd32ff1975">Jarvis::ModuleFrame::ModuleFrame::release</a></div><div class="ttdeci">void release()</div><div class="ttdoc">Releases the module. </div><div class="ttdef"><b>Definition:</b> ModuleFrame.cpp:48</div></div>
-<div class="ttc" id="namespace_jarvis_html"><div class="ttname"><a href="namespace_jarvis.html">Jarvis</a></div><div class="ttdef"><b>Definition:</b> JarvisDoc.hpp:14</div></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif // _H_MODULEFRAME</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="ttc" id="class_jarvis_1_1_module_frame_1_1_module_frame_html"><div class="ttname"><a href="class_jarvis_1_1_module_frame_1_1_module_frame.html">Jarvis::ModuleFrame::ModuleFrame</a></div><div class="ttdoc">Class that holds the module and makes all necessary calls. </div><div class="ttdef"><b>Definition:</b> ModuleFrame.hpp:47</div></div>
+<div class="ttc" id="class_jarvis_1_1_module_frame_1_1_module_frame_html_a79737a671da2eb62485921bb763dc519"><div class="ttname"><a href="class_jarvis_1_1_module_frame_1_1_module_frame.html#a79737a671da2eb62485921bb763dc519">Jarvis::ModuleFrame::ModuleFrame::load</a></div><div class="ttdeci">void load()</div><div class="ttdoc">Load the module into the frame. </div><div class="ttdef"><b>Definition:</b> ModuleFrame.cpp:46</div></div>
+<div class="ttc" id="class_jarvis_1_1_module_frame_1_1_module_frame_html_af79c4d7756497b12f26ca6fa3a9ddada"><div class="ttname"><a href="class_jarvis_1_1_module_frame_1_1_module_frame.html#af79c4d7756497b12f26ca6fa3a9ddada">Jarvis::ModuleFrame::ModuleFrame::ModuleFrame</a></div><div class="ttdeci">ModuleFrame()</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> ModuleFrame.cpp:92</div></div>
+<div class="ttc" id="class_jarvis_1_1_module_frame_1_1_module_frame_html_aad902957f0384508a01c3e9cc05563c1"><div class="ttname"><a href="class_jarvis_1_1_module_frame_1_1_module_frame.html#aad902957f0384508a01c3e9cc05563c1">Jarvis::ModuleFrame::ModuleFrame::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Run the specified funcion. </div><div class="ttdef"><b>Definition:</b> ModuleFrame.cpp:71</div></div>
+<div class="ttc" id="class_jarvis_1_1_module_frame_1_1_module_frame_html_ae88d8dce359e569e965208cd32ff1975"><div class="ttname"><a href="class_jarvis_1_1_module_frame_1_1_module_frame.html#ae88d8dce359e569e965208cd32ff1975">Jarvis::ModuleFrame::ModuleFrame::release</a></div><div class="ttdeci">void release()</div><div class="ttdoc">Releases the module. </div><div class="ttdef"><b>Definition:</b> ModuleFrame.cpp:80</div></div>
+<div class="ttc" id="class_module_html"><div class="ttname"><a href="class_module.html">Module</a></div><div class="ttdoc">Interface for any Jarvis Module. </div><div class="ttdef"><b>Definition:</b> Module.hpp:45</div></div>
+<div class="ttc" id="namespace_jarvis_html"><div class="ttname"><a href="namespace_jarvis.html">Jarvis</a></div><div class="ttdef"><b>Definition:</b> JarvisDoc.hpp:38</div></div>
+<div class="ttc" id="class_jarvis_1_1_module_frame_1_1_module_frame_html_aefadccfa57a1b97eb42182ea0516d52e"><div class="ttname"><a href="class_jarvis_1_1_module_frame_1_1_module_frame.html#aefadccfa57a1b97eb42182ea0516d52e">Jarvis::ModuleFrame::ModuleFrame::~ModuleFrame</a></div><div class="ttdeci">~ModuleFrame()</div><div class="ttdoc">Destructor. </div><div class="ttdef"><b>Definition:</b> ModuleFrame.cpp:103</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_3c4f578cbea721d75938c4f9e9eff3f3.html">jarvis-module-frame</a></li><li class="navelem"><a class="el" href="dir_f87d57d5a391439398a3afed796dd3cb.html">src</a></li><li class="navelem"><a class="el" href="_module_frame_8hpp.html">ModuleFrame.hpp</a></li>
-    <li class="footer">Generated on Tue Jun 9 2015 07:47:08 for Jarvis OS by
+    <li class="footer">Generated on Tue Jun 9 2015 17:52:22 for Jarvis OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

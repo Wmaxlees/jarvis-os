@@ -123,12 +123,23 @@ $(document).ready(function(){initNavTree('_test_module_8hpp_source.html','');});
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::string <a class="code" href="class_test_module.html#a1bb648a41a8016dd8e24a1efd993ad67">call</a>(std::string in);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::string <a class="code" href="class_test_module.html#a5af4d6110a4b88bc831cb445d9ae5857">who</a>();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::string test();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      ~<a class="code" href="class_test_module.html">TestModule</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::string test();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif //_H_TESTMODULE</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <a class="code" href="class_module.html">Module</a>* <span class="keyword">get</span>() {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_test_module.html">TestModule</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <span class="keywordtype">void</span> destroy(<a class="code" href="class_module.html">Module</a>* module) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keyword">delete</span> module;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif //_H_TESTMODULE</span></div>
 <div class="ttc" id="class_test_module_html_a5af4d6110a4b88bc831cb445d9ae5857"><div class="ttname"><a href="class_test_module.html#a5af4d6110a4b88bc831cb445d9ae5857">TestModule::who</a></div><div class="ttdeci">std::string who()</div><div class="ttdoc">Returns a description of the module. </div><div class="ttdef"><b>Definition:</b> TestModule.cpp:47</div></div>
 <div class="ttc" id="class_module_html"><div class="ttname"><a href="class_module.html">Module</a></div><div class="ttdoc">Interface for any Jarvis Module. </div><div class="ttdef"><b>Definition:</b> Module.hpp:45</div></div>
 <div class="ttc" id="class_test_module_html"><div class="ttname"><a href="class_test_module.html">TestModule</a></div><div class="ttdef"><b>Definition:</b> TestModule.hpp:35</div></div>
@@ -139,7 +150,7 @@ $(document).ready(function(){initNavTree('_test_module_8hpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_f918b14893c18a05a59e359aabc749a9.html">jarvis-modules</a></li><li class="navelem"><a class="el" href="dir_d2c070c6ed740d3b6655f7a1d22944bf.html">test-module</a></li><li class="navelem"><a class="el" href="_test_module_8hpp.html">TestModule.hpp</a></li>
-    <li class="footer">Generated on Tue Jun 9 2015 07:47:08 for Jarvis OS by
+    <li class="footer">Generated on Tue Jun 9 2015 17:52:22 for Jarvis OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

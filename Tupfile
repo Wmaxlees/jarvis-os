@@ -21,11 +21,11 @@
 # ----------------------------------------------------------------
 # ----------- TESTS
 # ----------------------------------------------------------------
-: test/test.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> test/%B.o
+: test/test.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> test/bin/%B.o
 
 # ----------- Jarvis-NLP
 : foreach jarvis-nlp/test/*.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> jarvis-nlp/test/obj/%B.o
-: jarvis-nlp/test/obj/*.o test/test.o |> g++ -std=c++11 -Wall %f -o %o |> test/jarvis-nlp
+: jarvis-nlp/test/obj/*.o test/bin/test.o |> g++ -std=c++11 -Wall %f -o %o |> test/jarvis-nlp
 
 
 

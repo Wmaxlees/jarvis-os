@@ -1,5 +1,5 @@
 .tup
-test/*.o
+test/bin/*.o
 test/jarvis-nlp
 jarvis-nlp/debug/obj/*.o
 jarvis-nlp/test/obj/*.o

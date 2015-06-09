@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['valuesgenerator',['ValuesGenerator',['../class_catch_1_1_values_generator.html',1,'Catch']]]
+  ['versioninfo',['VersionInfo',['../classel_1_1_version_info.html',1,'el']]],
+  ['vregistry',['VRegistry',['../classel_1_1base_1_1_v_registry.html',1,'el::base']]]
 ];

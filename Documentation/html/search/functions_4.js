@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['setinput',['setInput',['../class_sigmoid_neuron.html#af46725471a71c9d24db47ac929a7cf79',1,'SigmoidNeuron::setInput()'],['../class_sigmoid_neuron_b_plus.html#a77ef9f34e6f0c601da8093d2e43181f9',1,'SigmoidNeuronBPlus::setInput()']]],
-  ['sigmoidneuron',['SigmoidNeuron',['../class_sigmoid_neuron.html#ac3850e53911b7078b33a37ee4e8556d4',1,'SigmoidNeuron']]],
-  ['sigmoidneuronbplus',['SigmoidNeuronBPlus',['../class_sigmoid_neuron_b_plus.html#ac75a5cdb1339394ea1431da27caf9354',1,'SigmoidNeuronBPlus']]]
+  ['empty',['empty',['../classel_1_1base_1_1utils_1_1_command_line_args.html#a014c586d14eb73f2ec1deb5b08bdd6a7',1,'el::base::utils::CommandLineArgs::empty()'],['../classel_1_1base_1_1utils_1_1_abstract_registry.html#a43ff6484b778c298416c482c07a4df3f',1,'el::base::utils::AbstractRegistry::empty()']]],
+  ['end',['end',['../classel_1_1base_1_1utils_1_1_abstract_registry.html#a67c40207c171f23ad50a71db819e84f9',1,'el::base::utils::AbstractRegistry']]],
+  ['endswith',['endsWith',['../classel_1_1base_1_1utils_1_1_str.html#a5bcf5f6cc41a7ed683be115148579561',1,'el::base::utils::Str']]],
+  ['extractpathfromfilename',['extractPathFromFilename',['../classel_1_1base_1_1utils_1_1_file.html#af541c62ed408de7e368d339f96c0c6cf',1,'el::base::utils::File']]]
 ];

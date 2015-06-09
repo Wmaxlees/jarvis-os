@@ -33,13 +33,16 @@ using Jarvis::ModuleFrame::ModuleFrame;
 
 int main(int argc, char** argv) {
 
-   ModuleFrame frame;
+   ModuleFrame* frame = new ModuleFrame();
 
-   frame.load();
+   frame->load();
 
-   frame.run();
+   frame->run();
 
-   frame.release(); 
+   frame->release();
+
+   delete frame;
+   frame = nullptr;
 
    return EXIT_SUCCESS;
 }

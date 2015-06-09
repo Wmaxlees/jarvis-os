@@ -138,13 +138,43 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abf5976cca194a98561cdd9bb38e1aba0"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module.html#abf5976cca194a98561cdd9bb38e1aba0">who</a> ()=0</td></tr>
 <tr class="memdesc:abf5976cca194a98561cdd9bb38e1aba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a description of the module.  <a href="#abf5976cca194a98561cdd9bb38e1aba0">More...</a><br /></td></tr>
 <tr class="separator:abf5976cca194a98561cdd9bb38e1aba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f2a54e7dacfb7a67355f1412c07130"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_module.html#a57f2a54e7dacfb7a67355f1412c07130">~Module</a> ()</td></tr>
+<tr class="memdesc:a57f2a54e7dacfb7a67355f1412c07130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a57f2a54e7dacfb7a67355f1412c07130">More...</a><br /></td></tr>
+<tr class="separator:a57f2a54e7dacfb7a67355f1412c07130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for any <a class="el" href="namespace_jarvis.html">Jarvis</a> <a class="el" href="class_module.html" title="Interface for any Jarvis Module. ">Module</a>. </p>
 <p>This interface should be used for any module to be used in the <a class="el" href="namespace_jarvis.html">Jarvis</a> system. It comes with two functions that must be overridden.</p>
 <p>std::string <a class="el" href="class_module.html#ac9f545ebde4cb419231545e72b98b7bf" title="Calls module functions. ">call(std::string in)</a> &ndash; Used to call functions by the <a class="el" href="namespace_jarvis.html">Jarvis</a> <a class="el" href="class_module.html" title="Interface for any Jarvis Module. ">Module</a> frame. std::string <a class="el" href="class_module.html#abf5976cca194a98561cdd9bb38e1aba0" title="Returns a description of the module. ">who()</a> &ndash; Used by the <a class="el" href="namespace_jarvis.html">Jarvis</a> <a class="el" href="class_module.html" title="Interface for any Jarvis Module. ">Module</a> frame to determine what functions can be called and what parameters are required.</p>
 <p>All data should be passed via pure JSON strings. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a57f2a54e7dacfb7a67355f1412c07130"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Module::~Module </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+<p>Must be overloaded to avoid possible 'delete' problems </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ac9f545ebde4cb419231545e72b98b7bf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -217,7 +247,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_module.html">Module</a></li>
-    <li class="footer">Generated on Tue Jun 9 2015 07:47:08 for Jarvis OS by
+    <li class="footer">Generated on Tue Jun 9 2015 17:52:22 for Jarvis OS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

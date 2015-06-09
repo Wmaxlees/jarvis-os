@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['registrarfortagaliases',['RegistrarForTagAliases',['../struct_catch_1_1_registrar_for_tag_aliases.html',1,'Catch']]],
-  ['release',['release',['../class_jarvis_1_1_module_frame_1_1_module_frame.html#ae88d8dce359e569e965208cd32ff1975',1,'Jarvis::ModuleFrame::ModuleFrame']]],
-  ['resultbuilder',['ResultBuilder',['../class_catch_1_1_result_builder.html',1,'Catch']]],
-  ['resultdisposition',['ResultDisposition',['../struct_catch_1_1_result_disposition.html',1,'Catch']]],
-  ['resultwas',['ResultWas',['../struct_catch_1_1_result_was.html',1,'Catch']]],
-  ['run',['run',['../class_jarvis_1_1_module_frame_1_1_module_frame.html#aad902957f0384508a01c3e9cc05563c1',1,'Jarvis::ModuleFrame::ModuleFrame']]]
+  ['network',['Network',['../class_network.html',1,'']]],
+  ['newfilestream',['newFileStream',['../classel_1_1base_1_1utils_1_1_file.html#aa4bef1f2e00269d75c1c1eabb0ce4563',1,'el::base::utils::File']]],
+  ['newlineforcontainer',['NewLineForContainer',['../namespaceel.html#a2784aacd04cb7816ac1c0b20fcbf83cba8246f93d9afd63f87632d2d718cabca8',1,'el']]],
+  ['nocopy',['NoCopy',['../classel_1_1base_1_1_no_copy.html',1,'el::base']]],
+  ['nomutex',['NoMutex',['../classel_1_1base_1_1threading_1_1internal_1_1_no_mutex.html',1,'el::base::threading::internal']]],
+  ['noscopedlock',['NoScopedLock',['../classel_1_1base_1_1threading_1_1internal_1_1_no_scoped_lock.html',1,'el::base::threading::internal']]],
+  ['nullwriter',['NullWriter',['../classel_1_1base_1_1_null_writer.html',1,'el::base']]]
 ];
