@@ -17,26 +17,25 @@
    along with Jarvis OS.  If not, see <http://www.gnu.org/licenses/>.
 
 
-   @file: JarvisDoc.hpp
+   @file: ModuleFrameDoc.hpp
    @author W. Max Lees <max.lees@gmail.com>
    @docdate 06.09.2015
-   @descr File that contains the documentation for the Jarvis namespace
+   @descr File that contains the documentation for the ModuleFrame namespace
 */
 
 #error DOCUMENTATION FILE ONLY
 
-/*!
-   Namespace that contains all of the Jarvis OS structure
-   within it.
-
-   Namespace contains the following sub-namespaces:
-      ModuleFrame
-      Module
-      NLP
-
-*/
 namespace Jarvis {
 
+   /*!
+      Namespace that contains all of the Module Frame structure
+      for Jarvis OS within it
+
+   */
+   namespace ModuleFrame {
+
+
+   }
 
 }
 
