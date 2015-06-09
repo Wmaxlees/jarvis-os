@@ -26,6 +26,8 @@
 */
 
 #include <dlfcn.h>
+// TODO: GET RID OF THIS
+#include <iostream>
 
 #include "ModuleFrame.hpp"
 
@@ -34,18 +36,35 @@ namespace Jarvis {
 
 
       void ModuleFrame::load() {
-         this->handle = dlopen("../jarvis-modules/modules/test-module.so", RTLD_LAZY);
-         if (!handle)
+         // Create a handle to the module
+         void* thandle = dlopen("../jarvis-modules/modules/test-module.so", RTLD_LAZY);
+         if (!thandle) {
+            std::cout << "Error loading module\n"; // TODO: ADD LOG ABILITY
             throw 1; // TODO: CREATE CUSTOM EXCEPTION CLASS 
+         }
+
+         // Create pointers to the module functions
+         this->get_function = (get*) dlsym(thandle, "get");
+         this->destroy_function = (destroy*) dlsym(thandle, "destroy");
+         if (dlerror()) {
+            std::cout << "Error getting pointers to functions\n";
+            throw 1; // TODO: CUSTOM EXCEPTION + LOGGING
+         }
+
+         // Get the module pointer
+         this->module = this->get_function();
+
       }
 
 
       void ModuleFrame::run() {
-
+         this->module->call("{\"function\":\"test\"}");
       }
 
-
       void ModuleFrame::release() {
+         // Release pointer to the module
+         this->destroy_function(this->module);
+         dlclose(this->handle);
 
       }
 

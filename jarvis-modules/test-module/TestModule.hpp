@@ -43,4 +43,13 @@ class TestModule: public Module {
 
 };
 
+extern "C" Module* get() {
+   return new TestModule();
+}
+
+
+extern "C" void destroy(Module* module) {
+   delete module;
+}
+
 #endif //_H_TESTMODULE

@@ -28,9 +28,16 @@
 #ifndef _H_MODULEFRAME
 #define _H_MODULEFRAME
 
+#include <string>
+
+#include "../../jarvis-modules/Module.hpp"
+
 namespace Jarvis {
    namespace ModuleFrame {
 
+      // Typedefs to get access module functions                                           
+      typedef Module* get();                                                            
+      typedef void destroy(Module* module); 
 
       //! Class that holds the module and makes all necessary calls
       /*!
@@ -60,12 +67,15 @@ namespace Jarvis {
 
 
          private:
-            void* handle;  //!< Pointer to the actual module
+            void* handle;        //!< Pointer to the actual module
+            get* get_function;   //!< Pointer to the who() function
+            destroy* destroy_function; //!< Pointer to the call() function
+
+            Module* module;      //!< Pointer to the actual model object
       };
 
    }
 }
-
 
 #endif // _H_MODULEFRAME
 
