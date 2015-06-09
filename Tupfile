@@ -8,3 +8,7 @@
 # ----------- Jarvis-NLP TEST
 : foreach jarvis-nlp/test/*.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> jarvis-nlp/test/obj/%B.o
 : jarvis-nlp/test/obj/*.o test/test.o |> g++ -std=c++11 -Wall %f -o %o |> test/jarvis-nlp
+
+# ----------- Test Module
+: foreach jarvis-modules/test-module/*.cpp |> g++ -fPIC -std=c++11 -Wall -c %f -o %o |> jarvis-modules/test-module/obj/%B.o
+: jarvis-modules/test-module/obj/*.o |> g++ -shared -std=c++11 -Wall -o %o %f |> jarvis-modules/modules/test-module.so

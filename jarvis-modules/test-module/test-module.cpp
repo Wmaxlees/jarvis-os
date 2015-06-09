@@ -27,19 +27,28 @@
 */
 
 #include <rapidjson/document.h>
+#include <iostream>
+
 
 #include "test-module.hpp"
 
+// Private function headers
+std::string test();
+
 std::string call(std::string in) {
 	// Parse the json string
-	Document doc;
-	doc.Parse(in);
+	rapidjson::Document doc;
+	doc.Parse(in.c_str());
 
-	if (doc["function"])
-		test();
+	if (doc["function"] == "test")
+		return test();
+
+	else
+		return "Function not found";
 }
 
 
-void test() {
+std::string test() {
 	std::cout << "Test call successful";
 }
+

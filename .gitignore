@@ -4,3 +4,6 @@ test/jarvis-nlp
 jarvis-nlp/debug/obj/*.o
 jarvis-nlp/test/obj/*.o
 jarvis-nlp/jarvis-nlp
+jarvis-module/modules/*
+jarvis-modules/test-module/obj/*.o
+
