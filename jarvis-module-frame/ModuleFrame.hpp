@@ -1,4 +1,4 @@
-/**
+/*!
    Copyright 2015 W. Max Lees
 
    This file is part of Jarvis OS.
@@ -15,40 +15,33 @@
 
    You should have received a copy of the GNU General Public License
    along with Jarvis OS.  If not, see <http://www.gnu.org/licenses/>.
+
+
+   @file: ModuleFrame.hpp
+
+   @author W. Max Lees <max.lees@gmail.com>
+   @docdate 06.08.2015
+
+   @descr Header file module frame class
 */
 
-/**
-   FILE: test-module.cpp
+#ifndef _H_MODULEFRAME
+#define _H_MODULEFRAME
 
-   @author W. Max Lees
-   @docdate 06.07.2015
+namespace Jarvis {
+   namespace ModuleFrame {
 
-   @descr Jarvis OS test module for proof of concept
-*/
-
-#include <rapidjson/document.h>
-#include <iostream>
+      class ModuleFrame {
+         public:
+            
 
 
-#include "test-module.hpp"
+         protected:
+      };
 
-// Private function headers
-std::string test();
-
-std::string call(std::string in) {
-	// Parse the json string
-	rapidjson::Document doc;
-	doc.Parse(in.c_str());
-
-	if (doc["function"] == "test")
-		return test();
-
-	else
-		return "Function not found";
+   }
 }
 
 
-std::string test() {
-	std::cout << "Test call successful";
-}
+#endif // _H_MODULEFRAME
 

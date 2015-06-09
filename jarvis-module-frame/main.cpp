@@ -1,4 +1,4 @@
-/**
+/*!
    Copyright 2015 W. Max Lees
 
    This file is part of Jarvis OS.
@@ -15,31 +15,26 @@
 
    You should have received a copy of the GNU General Public License
    along with Jarvis OS.  If not, see <http://www.gnu.org/licenses/>.
+
+
+   @file: main.cpp
+
+   @author W. Max Lees <max.lees@gmail.com>
+   @docdate 06.08.2015
+
+   @descr File that contains the main class that calls the module frames.
 */
 
-/**
-   FILE: test-module.hpp
+#include <stdlib>
 
-   @author W. Max Lees
-   @docdate 06.06.2015
+namespace Jarvis {
+   namespace ModuleFrame {
 
-   @descr Header file for PoC module
-*/
+      int main(int argc, char** argv) {
 
-#ifndef _H_TESTMODULE
-#define _H_TESTMODULE
+         return EXIT_SUCCESS;
+      }
 
-#include <string>
+   }
+}
 
-
-// Function to call all functions in the module
-/**
-	@param in
-		JSON string of function call and parameters
-
-	@return
-		JSON response string for the turnout of the module
-*/
-std::string call(std::string in);
-
-#endif //_H_TESTMODULE

@@ -17,7 +17,7 @@
    along with Jarvis OS.  If not, see <http://www.gnu.org/licenses/>.
 
 
-   @file: module.hpp
+   @file: Module.hpp
 
    @author W. Max Lees
    @docdate 06.08.2015
@@ -50,13 +50,13 @@ class Module {
 			     for that function
 		   @return A JSON string of the result and any additional information 
 		*/
-		virtual std::string call(std::string in);
+		virtual std::string call(std::string in) = 0;
 		//! Returns a description of the module
 		/*!
 		   @return A JSON string of all possible function calls to the module
 			   and a list of their necessary arguments
 		*/
-		virtual std::string who();
+		virtual std::string who() = 0;
 
 };
 
