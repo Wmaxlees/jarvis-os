@@ -58,7 +58,14 @@ class Module {
 		*/
 		virtual std::string who() = 0;
 
+      //! Destructor
+      /*!
+         Must be overloaded to avoid possible 'delete' problems
+      */
+      virtual ~Module(){}
+      
 };
+
 
 #endif // _H_MODULE
 

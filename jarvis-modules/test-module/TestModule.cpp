@@ -49,6 +49,11 @@ std::string TestModule::who() {
 }
 
 
+TestModule::~TestModule() {
+
+}
+
+
 std::string TestModule::test() {
 	std::cout << "Test call successful";
 

@@ -38,6 +38,8 @@ class TestModule: public Module {
 		std::string call(std::string in);
 		std::string who();
 
+      ~TestModule();
+
 	private:
 		std::string test();
 
