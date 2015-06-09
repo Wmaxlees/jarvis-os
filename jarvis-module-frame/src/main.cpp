@@ -29,7 +29,17 @@
 
 #include "ModuleFrame.hpp"
 
+using Jarvis::ModuleFrame::ModuleFrame;
+
 int main(int argc, char** argv) {
+
+   ModuleFrame frame;
+
+   frame.load();
+
+   frame.run();
+
+   frame.release(); 
 
    return EXIT_SUCCESS;
 }
