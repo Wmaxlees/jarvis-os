@@ -59,7 +59,8 @@ namespace Jarvis {
             void release();
 
 
-         protected:
+         private:
+            void* handle;  //!< Pointer to the actual module
       };
 
    }

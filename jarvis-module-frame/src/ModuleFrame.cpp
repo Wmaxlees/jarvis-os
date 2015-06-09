@@ -22,7 +22,7 @@
    @author W. Max Lees <max.lees@gmail.com>
    @docdate 06.08.2015
 
-   @descr File for module class
+   @descr File for module frame class
 */
 
 #include <dlfcn.h>
@@ -35,11 +35,8 @@ namespace Jarvis {
 
       void ModuleFrame::load() {
          this->handle = dlopen("../jarvis-modules/modules/test-module.so", RTLD_LAZY);
-         if (!handle) {
-            throw 1; // TODO: CREATE CUSTOM EXCEPTION CLASS
-
-         
-
+         if (!handle)
+            throw 1; // TODO: CREATE CUSTOM EXCEPTION CLASS 
       }
 
 
@@ -55,7 +52,4 @@ namespace Jarvis {
 
    }
 }
-
-
-#endif // _H_MODULEFRAME
 
