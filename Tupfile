@@ -7,8 +7,8 @@ VER=0.0.1
 : jarvis-nlp/debug/obj/*.o |> g++ -std=c++11 -Wall %f -o %o |> jarvis-nlp/jarvis-nlp$(VER)
 
 # ----------- Jarvis Module Frame DEBUG
-: foreach jarvis-module-frame/src/*.cpp |> g++ -std=c++11 -Wall -c %f -o %o |> jarvis-module-frame/debug/obj/%B.o
-: jarvis-module-frame/debug/obj/*.o |> g++ -std=c++11 -Wall %f -o %o |> jarvis-module-frame/jarvis-module-frame$(VER)
+: foreach jarvis-module-frame/src/*.cpp |> g++ -std=c++11 -Wall -c `pkg-config --libs gmodule-2.0 --cflags glib-2.0` %f -o %o |> jarvis-module-frame/debug/obj/%B.o
+: jarvis-module-frame/debug/obj/*.o |> g++ -std=c++11 -Wall %f `pkg-config --libs gmodule-2.0 --cflags glib-2.0` -o %o |> jarvis-module-frame/jarvis-module-frame$(VER)
 
 
 

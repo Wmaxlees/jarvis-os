@@ -27,7 +27,7 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <dbus-cxx.h>
+#include <gio/gio.h>
 
 #include "ModuleFrame.hpp"
 

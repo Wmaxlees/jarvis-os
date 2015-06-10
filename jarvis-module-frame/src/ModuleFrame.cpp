@@ -25,7 +25,6 @@
    @descr File for module frame class
 */
 
-#include <dlfcn.h>
 // TODO: GET RID OF THIS
 #include <iostream>
 
@@ -44,17 +43,23 @@ namespace Jarvis {
          TODO: CREATE CUSTOM EXCEPTION TO BE THROWN
       */
       void ModuleFrame::load(const char* modFile) {
+			// Check if modules are allowed
+			if (!g_module_supported()) {
+				std::cout << "Modules not supported on this system\n";
+				throw 1;
+			}
+
          // Create a handle to the module
-         this->handle = dlopen(modFile, RTLD_LAZY);
+         this->handle = g_module_open(modFile, G_MODULE_BIND_LAZY);
          if (!this->handle) {
             std::cout << "Error loading module\n"; // TODO: ADD LOG ABILITY
             throw 1; // TODO: CREATE CUSTOM EXCEPTION CLASS 
          }
 
          // Create pointers to the module functions
-         this->get_function = (get*) dlsym(this->handle, "get");
-         this->destroy_function = (destroy*) dlsym(this->handle, "destroy");
-         if (dlerror()) {
+			g_module_symbol(this->handle, "get", (gpointer *)&this->get_function);
+			g_module_symbol(this->handle, "destroy", (gpointer *)&this->destroy_function);
+         if (g_module_error()) {
             std::cout << "Error getting pointers to functions\n";
             throw 1; // TODO: CUSTOM EXCEPTION + LOGGING
          }
@@ -82,7 +87,7 @@ namespace Jarvis {
          this->destroy_function(this->module);
 
          if (this->handle)
-            dlclose(this->handle);
+            g_module_close(this->handle);
 
       }
 
@@ -102,7 +107,7 @@ namespace Jarvis {
       */
       ModuleFrame::~ModuleFrame() {
          if (this->handle)
-            dlclose(this->handle);
+            g_module_close(this->handle);
 
          this->get_function = nullptr;
          this->destroy_function = nullptr;
