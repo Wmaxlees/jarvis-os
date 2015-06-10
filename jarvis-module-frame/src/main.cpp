@@ -26,6 +26,7 @@
 */
 
 #include <cstdlib>
+#include <iostream>
 
 #include "ModuleFrame.hpp"
 
@@ -33,14 +34,16 @@ using Jarvis::ModuleFrame::ModuleFrame;
 
 int main(int argc, char** argv) {
 
+   // Temporarily reading argv as input
+   if (argc < 3) {
+      std::cout << "Usage:\n jarvis-module-frame <.so path> \"command json\"" << std::endl;
+      return EXIT_FAILURE;
+   }
+
    ModuleFrame* frame = new ModuleFrame();
-
-   frame->load();
-
-   frame->run();
-
+   frame->load(argv[1]);
+   frame->run(argv[2]);
    frame->release();
-
    delete frame;
    frame = nullptr;
 

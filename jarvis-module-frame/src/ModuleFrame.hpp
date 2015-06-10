@@ -58,9 +58,9 @@ namespace Jarvis {
       class ModuleFrame {
          public:
             //! Load the module into the frame
-            void load();
-            //! Run the specified funcion
-            void run();
+            void load(const char* modFile);
+            //! Run the specified function
+            void run(const char* cmd);
             //! Releases the module
             void release();
 

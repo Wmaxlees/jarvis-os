@@ -43,9 +43,9 @@ namespace Jarvis {
          TODO: ADD LOGGING INSTEAD OF STD::COUT
          TODO: CREATE CUSTOM EXCEPTION TO BE THROWN
       */
-      void ModuleFrame::load() {
+      void ModuleFrame::load(const char* modFile) {
          // Create a handle to the module
-         this->handle = dlopen("../jarvis-modules/modules/test-module.so", RTLD_LAZY);
+         this->handle = dlopen(modFile, RTLD_LAZY);
          if (!this->handle) {
             std::cout << "Error loading module\n"; // TODO: ADD LOG ABILITY
             throw 1; // TODO: CREATE CUSTOM EXCEPTION CLASS 
@@ -68,8 +68,8 @@ namespace Jarvis {
       /*!
          Calls the specified function
       */
-      void ModuleFrame::run() {
-         this->module->call("{\"function\":\"test\"}");
+      void ModuleFrame::run(const char* cmd) {
+         this->module->call(cmd);
       }
 
 
