@@ -32,6 +32,7 @@
 
 #include "../Module.hpp"
 
+//! Module to test if the framework is working
 class TestModule: public Module {
 
 	public:

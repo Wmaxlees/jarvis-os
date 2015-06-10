@@ -35,43 +35,47 @@
 namespace Jarvis {
    namespace ModuleFrame {
 
-      // Typedefs to get access module functions                                           
-      typedef Module* get();                                                            
+      //! Typedef for access to get module function.
+      /*!
+         get() is called to return an instance of the target module's
+         main class
+      */                                           
+      typedef Module* get();
+      //! Typedef for access to destroy module function.
+      /*!
+         destroy is called to destroy an instance of the target module's
+         main class. This must be used instead of 'delete' call
+      */                                                             
       typedef void destroy(Module* module); 
 
       //! Class that holds the module and makes all necessary calls
       /*!
-         STUB
+         This class is a frame that wraps around modules called by 
+         Jarvis OS. These modules are basically the Jarvis equivolent
+         of a standalone application.
 
       */
       class ModuleFrame {
          public:
             //! Load the module into the frame
-            /*!
-               STUB
-            */
             void load();
-
-
             //! Run the specified funcion
-            /*!
-               STUB
-            */
             void run();
-
             //! Releases the module
-            /*!
-               STUB
-            */
             void release();
 
 
+            //! Constructor
+            ModuleFrame();
+            //! Destructor
+            ~ModuleFrame();
+
          private:
-            void* handle;        //!< Pointer to the actual module
-            get* get_function;   //!< Pointer to the who() function
+            void* handle;              //!< Pointer to the actual module
+            get* get_function;         //!< Pointer to the who() function
             destroy* destroy_function; //!< Pointer to the call() function
 
-            Module* module;      //!< Pointer to the actual model object
+            Module* module;            //!< Pointer to the actual model object
       };
 
    }

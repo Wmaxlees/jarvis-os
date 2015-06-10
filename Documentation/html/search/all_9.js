@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['jarvis',['Jarvis',['../namespace_jarvis.html',1,'']]],
-  ['jarvisdoc_2ehpp',['JarvisDoc.hpp',['../_jarvis_doc_8hpp.html',1,'']]],
-  ['jarvis_2dos',['jarvis-os',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['moduleframe',['ModuleFrame',['../namespace_jarvis_1_1_module_frame.html',1,'Jarvis']]]
+  ['who',['who',['../class_module.html#abf5976cca194a98561cdd9bb38e1aba0',1,'Module::who()'],['../class_test_module.html#a5af4d6110a4b88bc831cb445d9ae5857',1,'TestModule::who()']]]
 ];

@@ -1,6 +1,5 @@
 var annotated =
 [
-    [ "el", "namespaceel.html", "namespaceel" ],
     [ "Jarvis", "namespace_jarvis.html", "namespace_jarvis" ],
     [ "Module", "class_module.html", "class_module" ],
     [ "Network", "class_network.html", "class_network" ],
