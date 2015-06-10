@@ -1,12 +1,12 @@
 .tup
 test/bin/*.o
-test/jarvis-nlp
+test/jarvis-nlp*
 jarvis-nlp/debug/obj/*.o
 jarvis-nlp/test/obj/*.o
-jarvis-nlp/jarvis-nlp
+jarvis-nlp/jarvis-nlp*
 jarvis-module/modules/*
 jarvis-modules/test-module/obj/*.o
 jarvis-module-frame/debug/obj/*.o
-jarvis-module-frame/jarvis-module-frame
+jarvis-module-frame/jarvis-module-frame*
 jarvis-modules/modules
 
