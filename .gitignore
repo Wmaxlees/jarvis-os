@@ -1,3 +1,5 @@
+*.sublime-project
+*.sublime-workspace
 .tup
 test/bin/*.o
 test/jarvis-nlp*
