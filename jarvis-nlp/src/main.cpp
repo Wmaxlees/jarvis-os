@@ -29,11 +29,17 @@
 #include <cstdlib>
 #include <iostream>
 
-#include "SigmoidNeuron.hpp"
+#include "JarvisNLP.hpp"
+
+using Jarvis::JarvisNLP::JarvisNLP;
 
 int main(int argc, char** argv) {
 
-	std::cout << "Stub----" << std::endl;
+	JarvisNLP<float> nlp;
+
+
+
+
 
 	return EXIT_SUCCESS;
 }
