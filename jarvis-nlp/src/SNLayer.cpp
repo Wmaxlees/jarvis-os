@@ -18,29 +18,27 @@
 */
 
 /**
-   FILE: Network.hpp
+   FILE: SNLayer.cpp
 
    @author W. Max Lees
-   @docdate 06.07.2015
+   @docdate 06.12.2015
 
-   @descr Network interface. Used so different types of networks can
-          be plugged into Jarvis-NLP without worry about changing core
-          code.
+   @descr Layer of neurons for the Sigmoid Neuron Network implementation
 */
 
-#ifndef _H_NETWORK
-#define _H_NETWORK
+#include "SNLayer.hpp"
 
-template <typename T>
-class Network {
-	public:
-      virtual bool init() = 0;
-      virtual std::vector<T> call(std::string input) = 0;
-      virtual bool destroy() = 0;
+namespace Jarvis {
+   namespace JarvisNLP {
 
-      virtual ~Network() {}
-	protected:
-		
-};
+      /*!
+         Initializes the layer based on the number of previous neurons
+         and the size of the current layer
+      */
+      template <typename T>
+      void SigmoidNeuronLayer<T>::init(int prevLayerSize, int layerSize) {
 
-#endif // _H_NETWORK
+
+      }
+   }
+}
