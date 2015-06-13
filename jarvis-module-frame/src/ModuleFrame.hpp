@@ -29,6 +29,7 @@
 #define _H_MODULEFRAME
 
 #include <string>
+#include <gmodule.h>
 
 #include "../../jarvis-modules/Module.hpp"
 
@@ -71,7 +72,7 @@ namespace Jarvis {
             ~ModuleFrame();
 
          private:
-            void* handle;              //!< Pointer to the actual module
+            GModule* handle;              //!< Pointer to the actual module
             get* get_function;         //!< Pointer to the who() function
             destroy* destroy_function; //!< Pointer to the call() function
 

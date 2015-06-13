@@ -27,6 +27,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <gio/gio.h>
 
 #include "ModuleFrame.hpp"
 
@@ -39,6 +40,9 @@ int main(int argc, char** argv) {
       std::cout << "Usage:\n jarvis-module-frame <.so path> \"command json\"" << std::endl;
       return EXIT_FAILURE;
    }
+
+   
+
 
    ModuleFrame* frame = new ModuleFrame();
    frame->load(argv[1]);
